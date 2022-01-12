@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.header {
+  padding: 10px;
+  background: #F0C300;
+  color: white
+}
+.header h1 {
+  font-size: 10px;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #568203;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+.navbar a {
+  float: left;
+  margin-left: 40px;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+.navbar a.right {
+  float: right;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color:  background-color: rgba(0, 32, 255, 1);
+}
+.navbar a.active {
+  background-color:#6495ED;
+  color: white;
+}
+
+.row {  
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+}
+
+.side {
+  -ms-flex: 50%; 
+  flex: 50%;
+  background-color:#FFFFFF;
+  padding: 20px;
+}
+
+.main {   
+  -ms-flex: 50%; 
+  flex: 50%;
+  background-color: #FFFFFF;
+  padding: 20px;
+}
+
+.picture {
+  width: 100%;
+  padding: 20px;
+}
+
+.footer {
+  height: 120px;
+  text-align: center;
+  background: gray;
+}
+
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+.search-container button {
+  float: right;
+  padding: 3px;
+  margin-right: 30px;
+  background:#800080;
+  font-size: 12px;
+  border: double;
+  cursor: pointer;
+}
+.search-container {
+  float: right;
+}
+.input[type=text] {
+  padding: 3px;
+  font-size: 17px;
+  border: double;
+  }
+
+.utcn-logo {
+  float: left;
+  width: 5%;
+  padding: 0.2%;
+}
+.ie-logo{
+  float: right;
+  width: 5%;
+  padding: 0.2%;
+}
+.social-links{
+  display: flex;
+}
+.social-links ul{
+ display: flex;
+ padding: 10px;
+}
+.social-items{
+ list-style: none;
+}
+.social-items a img{
+ width: 80%;
+ height: 35%;
+padding:5px;
+}
+.quick-links{
+ display: flex;
+}
+.quick-items{
+ list-style: none;
+}
+.quick-items a{
+text-decoration: none;
+ padding: 10px 20px;
+}
+.outer-footer{
+  background-color: green;
+text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+<div class="utcluj-logo">
+  <a href="https://www.utcluj.ro/"><img src="https://www.utcluj.ro/static/images/logo_site.png" style="width:100px; height: 50px;"></a> 
+<a href="https://ie.utcluj.ro/"><img src="https://ie.utcluj.ro/files/Acasa/images/new_images/ie-logo.png" style="width:100px; height: 50px;"></a>
+</div>
+</div>
+<div class="navbar">
+  <a href="home.html" class="active">HOME</a>
+  <a href="aboutus.html">ABOUT US</a>
+ <a href="converters.html">UNITS AND BASE CONVERTERS</a> 
+ <a href="calculators.html">kWh CALCULATOR</a>  
+  <a href="contact.html" >CONTACT</a>
+  <div class="search-container">
+      <form action="home.html">
+         <input type="text" placeholder="Search" name="search">
+         <button type="submit">Submit</button>
+      </form>
+    </div>
+</div>
+
+<div class="row">
+  <div class="side">
+     <h2 style="text-align:center;">About Us</h2>
+     <p>This website has been created to help everyone to access the online calculators and converters such as:
+      <ul>
+        <li>kWh calculator</li>
+        <li>kVA to kW converter</li>
+        <li>Binary to octal, decimal, hexadecimal converters</li>
+        <li>Octal to binary, decimal, hexadecimal converters </li>
+        <li>Decimal to binary, octal, hexadecimal converters</li>
+        <li>Length converter</li>
+        <li>Temperature converter</li>
+        <li>Voltage converter</li>
+        <li>Resistance converter</li>
+        <li>Electrostatic capacitance converter</li>
+      </ul></p>
+    <div class="picture" style="height:200px;"> <img src="myphoto.jpg" style="width: 80%; height:130%;">
+    </div><br>
+
+    <p><b>Website developer:</b> BIRASA Raymond, the student at Technical University of Cluj-Napoca, Faculty of Electrical Engineering, Master's in 
+Monitoring and Control Systems in Electrical Engineering (<abbr title="Sisteme de Monitorizare şi Control în Inginerie Electrică">SMCIE</abbr> ) <br>
+</p>
+  </div>
+  <div class="main"><br><br><br>
+    <p>This website is a project acomplished after learning the programming languages: <ul> <li><abbr title="HyperText Markup Language">HTML</abbr></il>, <li><abbr title="Cascading Style Sheets">CSS,</abbr></li>
+     <li><abbr title="Hypertext Preprocessor">PHP,</abbr></li>
+     and <li>JavaScript.</li></ul> 
+     The languages specified were used to develop this website during the first semester 0f academic year 2021-2022.<br> This project was carried out in <abbr title="Proiectarea Interfe&#355;elor Grafice
+pentru Monitorizare &#351;i Control">PIGMC </abbr>discipline, a course taught by <b>Conf. dr. ing. Laura Grindei.</b></p>
+    <div class="picture" style="height:200px;"> <img src="Laura.jpeg" style="width: 60%; height:120%;">
+      </div><br>
+      <p>This website has been created under the supervision and guidance of Conf. dr. ing. Laura Grindei who teaches the programming languages for web development at the Faculty of Electrical Engineering, <a href="https://www.utcluj.ro/en/"><abbr title="Universitatea Tehnic&#259; din Cluj-Napoca">UTCN</abbr> </a>, in Romania.</p>
+  
+  </div>
+</div>
+
+<div class="footer">
+  <div class="social-links">
+    <ul>
+   <li class="social-items"><a href="https://twitter.com/rbirasa"><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter2_colored_svg-1024.png"></a></li>
+    <li class="social-items"><a href="https://www.facebook.com/birasa.raymond"> <img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-1024.png"></a></li>
+    <li class="social-items"><a href="https://www.linkedin.com/in/raymond-birasa-55a86310b/"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-1024.png"></a></li>
+<li class="social-items"><a href="https://www.google.com/"> <img src="https://cdn3.iconfinder.com/data/icons/social-media-2068/64/_Google-1024.png"></a></li>
+<li class="quick-items"><a href="home.html">Home</a></li>
+    <li class="quick-items"><a href="https://www.utcluj.ro/">Technical University of Cluj-Napoca</a></li>
+    <li class="quick-items"><a href="https://ie.utcluj.ro/acasa.html">Faculty of Electrical Engineering</a></li>
+<li class="quick-items"><a href="https://ethm.utcluj.ro/acasa.html"> Derartment of Electrotechnics and
+Measurements </a></li>
+<li class="quick-items"><a href="https://www.iprcgishari.rp.ac.rw/">IPRCGishari </a></li>
+</ul>
+</div>
+</div>
+<div class="outer-footer">
+  &copy; 2021. All Rights Reserved
+</div>
+</body>
+</html>

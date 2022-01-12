@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<style>
+  body{
+    text-align: center;
+    border: double tomato;
+    background-color: beige;
+    content: "";
+  position: absolute;
+  top: 30px;
+  right: 400px;
+  width: 800px;
+  height: 200px;
+  z-index: -1;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius:8px;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius:8px;
+  }
+</style>
+<body>
+   <h4>Enter a binary number you want to convert to octal</h4> 
+   <form action="binoct.php" method="post"> 
+     Binary number= <input type="binary" name="binary"><br><br> 
+     To Octal number= ? <br><br>
+     <input type="submit" name="Submit"  >
+</form><br><br>
+
+<h3>HOW TO CONVERT BINARY TO OCTAL?</h3>
+<p><B>Binary</B>is the simplest kind of number system that uses only two digits of 0 and 1 (i.e. value of base 2). Since digital electronics have only these two states (either 0 or 1), so binary number is most preferred in modern computer engineer, networking and communication specialists, and other professionals.<br><br>
+But <b>Octal number</b> refers to the base-8 numbering system. The octal numbering system uses the numerals 0-1-2-3-4-5-6-7. In computing environments, it is commonly used as a shorter representation of binary numbers by grouping binary digits into threes. The chmod command in Linux or UNIX uses octal to assign file permissions.</p>
+<p><b>Example:</b> Convert this binary number into a decimal number<br>
+=(1010111100)<sub>2</sub> <br>
+STEPS: <br> Therefore, Binary to octal is (1010111100)<sub>2</sub><br>
+1. Making a group of three:<br>
+(1010111100)<sub>2</sub>= 1 010 111 100 <br>
+2. Adding two 0 to complete the set<br>
+<b>= 001 010 111 100</b> <br>
+
+Then write the octal equivalent number:<br>
+001=1, 010=2, 111=7, 100=4<br>
+Answer: (1010111100)<sub>2</sub>= <b>(1274)<sub>8</sub></b></p> <br>
+<a href="home.html" style="color:blue;">RETURN TO HOME PAGE</a><br><br>
+<a href="converters.html" style="color:darkred;">RETURN TO CONVERTERS</a>
+ 
+ </body>
+    </html>

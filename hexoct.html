@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<style>
+  body{
+    text-align: center;
+    border: double tomato;
+    background-color: beige;
+    content: "";
+  position: absolute;
+  top: 30px;
+  right: 400px;
+  width: 800px;
+  height: 200px;
+  z-index: -1;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius:8px;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius:8px;
+  }
+</style>
+<body>
+   <h4>Enter hexadecimal number you want to convert to octal number</h4> 
+   <form action="hexoct.php" method="post"> 
+     Hexadecimal number= <input type="hexadecimal" name="hexadecimal"> <br><br> 
+     To octal number= ? <br><br>
+     <input type="submit" name=""Submit>
+</form><br><br>
+
+<h3>HOW TO CONVERT HEXADECIMAL TO OCTAL?</h3>
+<p><b>An octal number</b> refers to the base-8 numbering system. The octal numbering system uses the numerals 0-1-2-3-4-5-6-7. In computing environments, it is commonly used as a shorter representation of binary numbers by grouping binary digits into threes. The chmod command in Linux or UNIX uses octal to assign file permissions.</p><br>
+The <b>hexadecimal number</b>is the name of the numbering system that is base 16. This system, therefore, has numerals 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, and 15. That means that two-digit decimal numbers 10, 11, 12, 13, 14, and 15 must be represented by a single numeral to exist in this numbering system. To address the two-digit decimal values, the alphabetic characters A, B, C, D, E, and F are used to represent these values in hexadecimal and are treated as valid numerals.<br><br>
+<b>Example:</b> (FF)<sub>16</sub> =(?)<sub>8</sub><br><br>
+Step 1: In order to convert the hexadecimal number into binary, we need to express every hexadecimal value using 4 binary bits.<br>
+Binary equivalent of F is (1111)<sub>2</sub><br>
+= (FF)<sub>16</sub>
+= (1111)(1111)<br>
+= (11111111)<sub>2</sub><br>
+Convert (11111111)2 into Octal<br>
+Step 2: In order to convert the binary number into octal, we need to group every 3 binary bits.<br>
+&#8594;<b>(11111111)<sub>2</sub> in Octal</b>
+= (11111111)<sub>2</sub>
+= (11)(111)(111)
+= (377)<sub>8</sub><br>
+= (FF)<sub>16</sub>=<b>(377)<sub>8</sub></b></p><br><br>
+<a href="home.html" style="color:blue;">RETURN TO HOME PAGE</a><br>
+<a href="converters.html" style="color:darkred;">RETURN TO CONVERTERS</a><br>
+
+ </body>
+    </html>

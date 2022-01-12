@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<style>
+  body{
+    text-align: center;
+    border: double tomato;
+    background-color: beige;
+    content: "";
+  position: absolute;
+  top: 30px;
+  right: 400px;
+  width: 800px;
+  height: 200px;
+  z-index: -1;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius:8px;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius:8px;
+  }
+</style>
+<body>
+   <h4>Enter Decimal number you want to convert to octal number</h4> 
+   <form action="decoct.php" method="post"> 
+     Decimal number= <input type="decimal" name="decimal"> <br><br> 
+     To Octal number= ? <br><br>
+     <input type="submit" name=""Submit>
+</form><br><br>
+
+<h3>HOW TO CONVERT DECIMAL TO OCTAL?</h3>
+<p><b>An octal number</b> refers to the base-8 numbering system. The octal numbering system uses the numerals 0-1-2-3-4-5-6-7. In computing environments, it is commonly used as a shorter representation of binary numbers by grouping binary digits into threes. The chmod command in Linux or UNIX uses octal to assign file permissions.</p><br>
+The <b>decimal number</b> uses digits from 0 to 9 to represent a number with base 10. The number is expressed in base-10 where each value is denoted by 0 or first nine positive integers.<br><br>
+
+<b>Conversion steps:</b><br>
+1. Divide the number by 8.<br>
+2. Get the integer quotient for the next iteration.<br>
+3. Get the remainder for the octal digit.<br>
+4. Repeat the steps until the quotient is equal to 0.<br> <br>
+<a href="home.html" style="color:blue;">RETURN TO HOME PAGE</a><br><br>
+<a href="converters.html" style="color:darkred;">RETURN TO CONVERTERS</a>
+ 
+
+ </body>
+    </html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>capacitance conversion</title>
+<style >
+ div{
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  top: 180px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 2px 1px royalblue;
+    text-align: center;
+    margin: 15px 0px;
+   }
+   select{
+    width: 170px;
+    margin-left: 7px;
+    margin-right: 7px;
+    color: blue;
+   }
+   p{
+    margin-left: 400px;
+    margin-top: 30px;
+   }
+   table, tr, td {
+  border: 1px solid black;
+  margin-right: 500px;
+  margin-left: 550px;
+  margin-top: 220px;
+  width: 350px;
+  text-align: center;
+   }
+  
+</style>
+</head>
+<body>
+  <p>Please provide the values below to convert from one unit to another unit.<br>
+    Type on input field (left) the values you want to convert,<br> and remember to select their unit and the result will be displayed on result field (right)</p>
+  <div class="converter-body">
+    
+    <h1 class="converter-title">Capacitance Converter</h1><br>
+
+    <input type="text" placeholder="Input" id="input">
+    <span>=</span>
+    <input type="text" placeholder="Result" id="result">
+
+
+    <select  id="inputType">
+      <option value="farad">Farad [F]</option>
+      <option value="microfarad">microfarad [µF]</option>
+      <option value="picofarad">picofarad [pF]</option>
+      <option value="nanofarad">nanofarad [nF]</option>
+      <option value="millifarad">millifarad [mF]</option>
+    </select>
+
+    <select  id="resultType">
+     <option value="farad">Farad [F]</option>
+      <option value="microfarad">microfarad [µF]</option>
+      <option value="picofarad">picofarad [pF]</option>
+      <option value="nanofarad">nanofarad [nF]</option>
+      <option value="millifarad">millifarad [mF]</option>
+    </select>
+
+  </div>
+    <script >
+var input = document.getElementById('input');
+var result = document.getElementById('result');
+var inputType = document.getElementById('inputType');
+var resultType = document.getElementById('resultType');
+var option_from,option_to;
+
+// now add listener
+input.addEventListener("keyup",myResult);
+inputType.addEventListener("change",myResult);
+resultType.addEventListener("change",myResult);
+
+// taking initial value
+option_from = inputType.value;
+option_to   = resultType.value;
+
+
+function myResult(){
+
+// when we change the input and output type vale we need to updata the 
+// option_from and option_to
+
+  option_from = inputType.value;
+  option_to = resultType.value;
+
+
+// farad to ..................
+
+  if(option_from === "farad" && option_to==="microfarad"){
+   
+    result.value = Number(input.value) /10**(-6);
+  }else if(option_from === "farad" && option_to==="picofarad"){
+    
+    result.value =  Number(input.value) /10**(-12);
+
+  }else if(option_from === "farad" && option_to==="farad"){
+ 
+    result.value = input.value;
+  } 
+  else if(option_from === "farad" && option_to==="nanofarad"){
+
+   
+    result.value = Number(input.value) *10**(9);
+
+  }else if(option_from === "farad" && option_to==="millifarad"){
+
+   
+    result.value = Number(input.value) /10**(-3);
+
+  }
+  // picofarad to ..................
+
+  if(option_from === "picofarad" && option_to==="microfarad"){
+   
+    result.value = Number(input.value) /10**(6);
+  }else if(option_from === "picofarad" && option_to==="picofarad"){
+      result.value = input.value;
+    
+  }else if(option_from === "picofarad" && option_to==="farad"){
+      result.value =  Number(input.value) /10**(12);
+  } 
+  else if(option_from === "picofarad" && option_to==="nanofarad"){
+
+    result.value = Number(input.value) *10**(-3);
+
+  }else if(option_from === "picofarad" && option_to==="millifarad"){
+
+    result.value = Number(input.value) *10**(-9);
+  }
+  // microfarad to ..................
+
+  if(option_from === "microfarad" && option_to==="farad"){
+   
+    result.value = Number(input.value) /10**(6);
+  }else if(option_from === "microfarad" && option_to==="microfarad"){
+      result.value = input.value;
+    
+  }else if(option_from === "microfarad" && option_to==="picofarad"){
+      result.value =  Number(input.value) *10**(6);
+  } 
+  else if(option_from === "microfarad" && option_to==="nanofarad"){
+
+    result.value = Number(input.value) *10**(3);
+
+  }else if(option_from === "microfarad" && option_to==="millifarad"){
+
+    result.value = Number(input.value) *10**(-3);
+  }
+  // millifarad to ..................
+
+  if(option_from === "millifarad" && option_to==="farad"){
+   
+    result.value = Number(input.value) *10**(-3);
+  }else if(option_from === "millifarad" && option_to==="millifarad"){
+      result.value = input.value;
+    
+  }else if(option_from === "millifarad" && option_to==="picofarad"){
+      result.value =  Number(input.value) *10**(9);
+  } 
+  else if(option_from === "millifarad" && option_to==="nanofarad"){
+
+    result.value = Number(input.value) *10**(6);
+
+  }else if(option_from === "millifarad" && option_to==="microfarad"){
+
+    result.value = Number(input.value) *10**(3);
+  }
+  // nanofarad to ..................
+
+  if(option_from === "nanofarad" && option_to==="farad"){
+   
+    result.value = Number(input.value) *10**(-9);
+  }else if(option_from === "nanofarad" && option_to==="nanofarad"){
+      result.value = input.value;
+    
+  }else if(option_from === "nanofarad" && option_to==="picofarad"){
+      result.value =  Number(input.value) *10**(3);
+  } 
+  else if(option_from === "nanofarad" && option_to==="microfarad"){
+
+    result.value = Number(input.value) *10**(-3);
+
+  }else if(option_from === "nanofarad" && option_to==="millifarad"){
+
+    result.value = Number(input.value) *10**(-6);
+  }
+}
+    </script>
+    <table>
+      <tr>
+        <td><b>Farad</b></td>
+        <td><b>Equivalence</b></td>
+      </tr>
+      <tr>
+        <td>1F</td>
+        <td>1000 mF</td>
+      </tr>
+      <tr>
+        <td>1F</td>
+        <td>10^ <sup>6</sup> µF</td>
+      </tr>
+      </tr>
+      <tr>
+        <td>1F</td>
+        <td>10^<sup>9</sup> nF</td>
+      </tr>
+      </tr>
+      <tr>
+        <td>1F</td>
+        <td>10^<sup>12</sup> pF</td>
+      </tr>
+    </table> <br>
+<a href="home.html" style="color:blue;">RETURN TO HOME PAGE</a><br><br>
+<a href="converters.html" style="color:darkred;">RETURN TO CONVERTERS</a>
+ 
+</body>
+</html>
